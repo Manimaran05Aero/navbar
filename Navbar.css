@@ -1,0 +1,70 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.navbarcontainer{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(195, 181, 216);
+    font-weight: bold;
+    padding: 20px 20px;
+}  
+
+i{
+    font-size: 30px;
+}
+
+input:checked ~ .menuIcon{
+    color: brown;
+}
+
+input:checked ~ .menuList{
+  left: 0;
+}
+
+input{
+    display: none;
+}
+
+.companyname{
+    font-size: 30px;
+}
+
+.menuList{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+.menuList p{
+    padding: 10px;
+    border-radius: 5px;
+}
+.menuList p:hover{
+    cursor: pointer;
+    background-color: rgb(235, 167, 79);
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    .menuList {
+        position: fixed;
+        left:-100%;
+        padding-top: 20px;
+        background-color: rgb(112, 111, 179);
+        top: 73px;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+}
+@media screen and (min-width: 800px) and (max-width: 1400px) {
+    
+.menuIcon{
+    display: none;
+}  
+}
